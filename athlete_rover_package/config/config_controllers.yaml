@@ -1,0 +1,255 @@
+# Robot name goes here
+athlete_rover:
+  # default controller
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+    gazebo_ros_control:
+      pid_gains:
+        wheel_1_controller:
+          p: 10000.0
+          i: 2.0
+          d: 10.0
+        wheel_2_controller:
+          p: 10000.0
+          i: 2.0
+          d: 10.0
+        wheel_3_controller:
+          p: 10000.0
+          i: 2.0
+          d: 10.0
+        wheel_4_controller:
+          p: 10000.0
+          i: 2.0
+          d: 10.0
+        wheel_5_controller:
+          p: 10000.0
+          i: 2.0
+          d: 10.0
+        wheel_6_controller:
+          p: 10000.0
+          i: 2.0
+          d: 10.0
+
+##### leg 1 controllers
+  # Controller 1
+  coxa_1_controller:
+    type: effort_controllers/JointPositionController 
+    joint: coxa_1_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 2
+  femur_1_controller:
+    type: effort_controllers/JointPositionController 
+    joint: femur_1_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 3
+  tibia_1_controller:
+    type: effort_controllers/JointPositionController  
+    joint: tibia_1_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 4
+  pitch_1_controller:
+    type: effort_controllers/JointPositionController 
+    joint: pitch_1_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 5
+  roll_1_controller:
+    type: effort_controllers/JointPositionController 
+    joint: roll_1_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+  # Controller 6
+  wheel_1_controller: 
+    type: velocity_controllers/JointVelocityController 
+    joint: wheel_1_joint 
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}  
+
+##### leg 2 controllers
+  # Controller 1
+  coxa_2_controller:
+    type: effort_controllers/JointPositionController 
+    joint: coxa_2_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 2
+  femur_2_controller:
+    type: effort_controllers/JointPositionController 
+    joint: femur_2_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 3
+  tibia_2_controller:
+    type: effort_controllers/JointPositionController  
+    joint: tibia_2_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 4
+  pitch_2_controller:
+    type: effort_controllers/JointPositionController 
+    joint: pitch_2_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 5
+  roll_2_controller:
+    type: effort_controllers/JointPositionController 
+    joint: roll_2_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+  # Controller 6
+  wheel_2_controller: 
+    type: velocity_controllers/JointVelocityController 
+    joint: wheel_2_joint 
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}  
+    
+##### leg 3 controllers
+  # Controller 1
+  coxa_3_controller:
+    type: effort_controllers/JointPositionController 
+    joint: coxa_3_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 2
+  femur_3_controller:
+    type: effort_controllers/JointPositionController 
+    joint: femur_3_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 3
+  tibia_3_controller:
+    type: effort_controllers/JointPositionController  
+    joint: tibia_3_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 4
+  pitch_3_controller:
+    type: effort_controllers/JointPositionController 
+    joint: pitch_3_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 5
+  roll_3_controller:
+    type: effort_controllers/JointPositionController 
+    joint: roll_3_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+  # Controller 6
+  wheel_3_controller: 
+    type: velocity_controllers/JointVelocityController 
+    joint: wheel_3_joint 
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+##### leg 4 controllers
+  # Controller 1
+  coxa_4_controller:
+    type: effort_controllers/JointPositionController 
+    joint: coxa_4_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 2
+  femur_4_controller:
+    type: effort_controllers/JointPositionController 
+    joint: femur_4_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 3
+  tibia_4_controller:
+    type: effort_controllers/JointPositionController  
+    joint: tibia_4_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 4
+  pitch_4_controller:
+    type: effort_controllers/JointPositionController 
+    joint: pitch_4_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 5
+  roll_4_controller:
+    type: effort_controllers/JointPositionController 
+    joint: roll_4_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+  # Controller 6
+  wheel_4_controller: 
+    type: velocity_controllers/JointVelocityController 
+    joint: wheel_4_joint 
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+##### leg 5 controllers
+  # Controller 1
+  coxa_5_controller:
+    type: effort_controllers/JointPositionController 
+    joint: coxa_5_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 2
+  femur_5_controller:
+    type: effort_controllers/JointPositionController 
+    joint: femur_5_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 3
+  tibia_5_controller:
+    type: effort_controllers/JointPositionController  
+    joint: tibia_5_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 4
+  pitch_5_controller:
+    type: effort_controllers/JointPositionController 
+    joint: pitch_5_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 5
+  roll_5_controller:
+    type: effort_controllers/JointPositionController 
+    joint: roll_5_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+  # Controller 6
+  wheel_5_controller: 
+    type: velocity_controllers/JointVelocityController 
+    joint: wheel_5_joint 
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+##### leg 6 controllers
+  # Controller 1
+  coxa_6_controller:
+    type: effort_controllers/JointPositionController 
+    joint: coxa_6_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 2
+  femur_6_controller:
+    type: effort_controllers/JointPositionController 
+    joint: femur_6_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 3
+  tibia_6_controller:
+    type: effort_controllers/JointPositionController  
+    joint: tibia_6_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0}
+
+  # Controller 4
+  pitch_6_controller:
+    type: effort_controllers/JointPositionController 
+    joint: pitch_6_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+
+  # Controller 5
+  roll_6_controller:
+    type: effort_controllers/JointPositionController 
+    joint: roll_6_joint  
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+    
+  # Controller 6
+  wheel_6_controller: 
+    type: velocity_controllers/JointVelocityController 
+    joint: wheel_6_joint 
+    pid : {p: 10000.0 , i: 2.0 , d: 10.0} 
+ 

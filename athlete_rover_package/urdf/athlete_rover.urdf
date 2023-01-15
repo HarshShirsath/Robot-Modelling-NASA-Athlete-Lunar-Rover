@@ -1,0 +1,2536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="athlete_rover">
+
+  <link name="dummy_link">
+  <pose> 0 0 0 0 0 0 </pose>
+  </link>
+  <joint name="dummy_link_joint" type="fixed">
+    <parent link="dummy_link"/>
+    <child link="base_link"/>
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-3.89651045737105E-06 -3.51661274569633E-05 0.022819804533394"
+        rpy="0 0 0" />
+      <mass
+        value="82.1772844380817" />
+      <inertia
+        ixx="41.2297284246966"
+        ixy="8.06934896757869E-05"
+        ixz="4.60423099729454E-05"
+        iyy="41.2341036600388"
+        iyz="0.000409782496317497"
+        izz="82.1122087409556" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="coxa_1_link">
+    <inertial>
+      <origin
+        xyz="-0.0020752967250691 0.0949654432786211 4.12522192794196E-09"
+        rpy="0 0 0" />
+      <mass
+        value="3.09349733545696" />
+      <inertia
+        ixx="0.0516743356882014"
+        ixy="0.000635104468693699"
+        ixz="5.77488235257917E-11"
+        iyy="0.0226258682108944"
+        iyz="-2.81451449627731E-11"
+        izz="0.0520928564501634" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0251251509143729 1.14972550062679 0.106"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="femur_1_link">
+    <inertial>
+      <origin
+        xyz="-0.250000000008996 -1.09634523681734E-14 1.00160355703816E-10"
+        rpy="0 0 0" />
+      <mass
+        value="9.59990933168455" />
+      <inertia
+        ixx="0.0909902906443396"
+        ixy="-1.81716460834631E-14"
+        ixz="8.73569183570261E-11"
+        iyy="0.501606623877439"
+        iyz="2.4843074816575E-17"
+        izz="0.475621900290096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0041729598475176 0.190954409234537 0"
+      rpy="-1.5707963267949 0 -1.54894663097856" />
+    <parent
+      link="coxa_1_link" />
+    <child
+      link="femur_1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="tibia_1_link">
+    <inertial>
+      <origin
+        xyz="0.261818511880902 -6.09914559755731E-06 -9.21556681939065E-05"
+        rpy="0 0 0" />
+      <mass
+        value="6.96014302108094" />
+      <inertia
+        ixx="0.0635588753454974"
+        ixy="1.46469185579545E-06"
+        ixz="1.31637927549643E-05"
+        iyy="0.287249190237788"
+        iyz="2.03209016254882E-07"
+        izz="0.265244228247773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 -3.14159265358975" />
+    <parent
+      link="femur_1_link" />
+    <child
+      link="tibia_1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="pitch_1_link">
+    <inertial>
+      <origin
+        xyz="-0.103835711575362 -1.06858966120171E-15 2.8272709867716E-10"
+        rpy="0 0 0" />
+      <mass
+        value="6.33029453889401" />
+      <inertia
+        ixx="0.0450020126784382"
+        ixy="-1.54914091166948E-17"
+        ixz="-1.74860722689657E-12"
+        iyy="0.0463115920590276"
+        iyz="1.19130119574728E-17"
+        izz="0.0373029491223062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_1_joint"
+    type="revolute">
+    <origin
+      xyz="0.449999999999999 0 0"
+      rpy="0 0 3.14159265358978" />
+    <parent
+      link="tibia_1_link" />
+    <child
+      link="pitch_1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="roll_1_link">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 -1.3878E-17 0.036219"
+        rpy="0 0 0" />
+      <mass
+        value="2.8914" />
+      <inertia
+        ixx="0.027037"
+        ixy="-8.5016E-19"
+        ixz="1.1411E-17"
+        iyy="0.026416"
+        iyz="-2.8221E-18"
+        izz="0.012233" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.225 0 0"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="pitch_1_link" />
+    <child
+      link="roll_1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="wheel_1_link">
+    <inertial>
+      <origin
+        xyz="3.5785437113578E-10 7.8177464502005E-12 4.16333634234434E-17"
+        rpy="0 0 0" />
+      <mass
+        value="4.70127847510141" />
+      <inertia
+        ixx="0.014956729011549"
+        ixy="-6.20739724327515E-18"
+        ixz="-3.57282624309142E-19"
+        iyy="0.014956729011549"
+        iyz="7.6462924007719E-19"
+        izz="0.0216299418386296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_1_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.210000000000002"
+      rpy="1.5707963267949 0.0218496955892154 -3.14159265358979" />
+    <parent
+      link="roll_1_link" />
+    <child
+      link="wheel_1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1000"
+      velocity="5" />
+  </joint>
+  <link
+    name="coxa_2_link">
+    <inertial>
+      <origin
+        xyz="-0.0841776002576038 0.0461779739081903 -2.22181904402374E-08"
+        rpy="0 0 0" />
+      <mass
+        value="3.09350209867759" />
+      <inertia
+        ixx="0.0294315495230902"
+        ixy="0.012431431143693"
+        ixz="5.79551469685196E-09"
+        iyy="0.0452732382073039"
+        iyz="2.22228995617047E-08"
+        izz="0.0516882160049569" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_2_joint"
+    type="revolute">
+    <origin
+      xyz="-1.00825406637877 0.55310373134763 0.106"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="femur_2_link">
+    <inertial>
+      <origin
+        xyz="-0.249999999991002 -6.93889390390723E-17 -1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="9.59990933168453" />
+      <inertia
+        ixx="0.0909902906443392"
+        ixy="-7.42070022951904E-17"
+        ixz="3.81639164714898E-17"
+        iyy="0.501606623877439"
+        iyz="-2.22833013519317E-17"
+        izz="0.475621900290096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.167457849264654 0.0918633154183783 0"
+      rpy="1.5707963267949 0 -0.501749080009075" />
+    <parent
+      link="coxa_2_link" />
+    <child
+      link="femur_2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="tibia_2_link">
+    <inertial>
+      <origin
+        xyz="-0.261818628643989 6.3043057244444E-06 -9.21714200156076E-05"
+        rpy="0 0 0" />
+      <mass
+        value="6.96014125805255" />
+      <inertia
+        ixx="0.0635589134253886"
+        ixy="1.44038404440838E-06"
+        ixz="-1.31705028903872E-05"
+        iyy="0.287249194512423"
+        iyz="-2.0997636667745E-07"
+        izz="0.265244297382879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="femur_2_link" />
+    <child
+      link="tibia_2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="pitch_2_link">
+    <inertial>
+      <origin
+        xyz="-0.10383571157536 -1.52655665885959E-16 0"
+        rpy="0 0 0" />
+      <mass
+        value="6.330294538894" />
+      <inertia
+        ixx="0.0450020126784381"
+        ixy="-2.63911714924311E-18"
+        ixz="5.72458747072346E-17"
+        iyy="0.0463115920590275"
+        iyz="-5.95799783764516E-18"
+        izz="0.0373029491223061" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.45 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="tibia_2_link" />
+    <child
+      link="pitch_2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="roll_2_link">
+    <inertial>
+      <origin
+        xyz="-3.1722E-11 6.9389E-16 0.036219"
+        rpy="0 0 0" />
+      <mass
+        value="2.8914" />
+      <inertia
+        ixx="0.027037"
+        ixy="-2.5997E-18"
+        ixz="3.3621E-12"
+        iyy="0.026416"
+        iyz="1.0399E-17"
+        izz="0.012233" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.225 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="pitch_2_link" />
+    <child
+      link="roll_2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="wheel_2_link">
+    <inertial>
+      <origin
+        xyz="4.7518E-11 8.6614E-11 4.7184E-16"
+        rpy="0 0 0" />
+      <mass
+        value="4.7013" />
+      <inertia
+        ixx="0.014957"
+        ixy="1.2311E-17"
+        ixz="-1.4353E-18"
+        iyy="0.014957"
+        iyz="-7.4284E-19"
+        izz="0.02163" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_2_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.210000000000002"
+      rpy="1.5707963267949 1.06904724701293 3.14159265358979" />
+    <parent
+      link="roll_2_link" />
+    <child
+      link="wheel_2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1000"
+      velocity="5" />
+  </joint>
+  <link
+    name="coxa_3_link">
+    <inertial>
+      <origin
+        xyz="-0.0812049627524478 -0.0492800521399603 2.24711022747681E-07"
+        rpy="0 0 0" />
+      <mass
+        value="3.0935171186438" />
+      <inertia
+        ixx="0.0304380209744716"
+        ixy="-0.0128959125993843"
+        ixz="6.60459464547568E-10"
+        iyy="0.0438622263728826"
+        iyz="1.81434039495181E-08"
+        izz="0.0520928544158363" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.983128915464405 -0.596621769279152 0.106"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_3_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="femur_3_link">
+    <inertial>
+      <origin
+        xyz="-0.249999999991004 1.52655665885959E-16 -1.00153774162948E-10"
+        rpy="0 0 0" />
+      <mass
+        value="9.59990933168453" />
+      <inertia
+        ixx="0.0909902906443396"
+        ixy="1.39513442257537E-16"
+        ixz="-8.73522192079701E-11"
+        iyy="0.501606623877438"
+        iyz="1.30494604954058E-17"
+        izz="0.475621900290094" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.163284889438 -0.0990910938541903 0"
+      rpy="1.5707963267949 0 0.545448471414632" />
+    <parent
+      link="coxa_3_link" />
+    <child
+      link="femur_3_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="tibia_3_link">
+    <inertial>
+      <origin
+        xyz="-0.261818901511832 6.53753785352651E-06 -9.23887225463549E-05"
+        rpy="0 0 0" />
+      <mass
+        value="6.96011256471288" />
+      <inertia
+        ixx="0.0635386720924055"
+        ixy="1.74511242102112E-06"
+        ixz="-1.23020730997507E-05"
+        iyy="0.287252730680044"
+        iyz="-8.89510348752013E-07"
+        izz="0.265230667311691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="femur_3_link" />
+    <child
+      link="tibia_3_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="pitch_3_link">
+    <inertial>
+      <origin
+        xyz="-0.103835711575361 -1.2490009027033E-16 -2.82709855525809E-10"
+        rpy="0 0 0" />
+      <mass
+        value="6.33029453889401" />
+      <inertia
+        ixx="0.0450020126784383"
+        ixy="3.29904277804922E-18"
+        ixz="1.74852146650473E-12"
+        iyy="0.0463115920590277"
+        iyz="2.85399041535222E-18"
+        izz="0.0373029491223062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.45 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="tibia_3_link" />
+    <child
+      link="pitch_3_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="roll_3_link">
+    <inertial>
+      <origin
+        xyz="-3.18453263759011E-10 -3.46944695195361E-16 0.0362188872061391"
+        rpy="0 0 0" />
+      <mass
+        value="2.89141906646132" />
+      <inertia
+        ixx="0.0270370859108734"
+        ixy="-1.19652927561417E-18"
+        ixz="3.36209966117496E-12"
+        iyy="0.0264160616419825"
+        iyz="1.53972123388716E-18"
+        izz="0.0122331983415657" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.225 0 0"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="pitch_3_link" />
+    <child
+      link="roll_3_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="wheel_3_link">
+    <inertial>
+      <origin
+        xyz="-1.85687021314607E-10 3.05979241943533E-10 -4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="4.7012784751014" />
+      <inertia
+        ixx="0.0149567290115489"
+        ixy="-2.81151344842935E-18"
+        ixz="5.60488957340741E-19"
+        iyy="0.014956729011549"
+        iyz="-2.17527384396653E-18"
+        izz="0.0216299418386295" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_3_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.21"
+      rpy="-1.5707963267949 1.02534785538026 0" />
+    <parent
+      link="roll_3_link" />
+    <child
+      link="wheel_3_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1000"
+      velocity="5" />
+  </joint>
+  <link
+    name="coxa_4_link">
+    <inertial>
+      <origin
+        xyz="0.00209765911084044 -0.0959889663362259 -3.59692914342347E-10"
+        rpy="0 0 0" />
+      <mass
+        value="3.09349737090629" />
+      <inertia
+        ixx="0.0520787841961164"
+        ixy="0.000643942982053842"
+        ixz="-5.7634207353993E-11"
+        iyy="0.022626061233471"
+        iyz="-1.11302733835467E-11"
+        izz="0.0516882145103432" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_4_joint"
+    type="revolute">
+    <origin
+      xyz="0.0251251509143635 -1.14972550062679 0.106"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_4_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="femur_4_link">
+    <inertial>
+      <origin
+        xyz="-0.249999999991003 1.11022302462516E-16 -1.00160497951141E-10"
+        rpy="0 0 0" />
+      <mass
+        value="9.59990933168454" />
+      <inertia
+        ixx="0.0909902906443395"
+        ixy="1.71450642248072E-17"
+        ixz="-8.73577486390498E-11"
+        iyy="0.501606623877438"
+        iyz="1.93262522600168E-17"
+        izz="0.475621900290095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_4_joint"
+    type="revolute">
+    <origin
+      xyz="0.00417295984751717 -0.190954409234537 0"
+      rpy="1.5707963267949 0 1.59264602261123" />
+    <parent
+      link="coxa_4_link" />
+    <child
+      link="femur_4_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="tibia_4_link">
+    <inertial>
+      <origin
+        xyz="-0.26181874577919 6.30145677273097E-06 -9.23537245826958E-05"
+        rpy="0 0 0" />
+      <mass
+        value="6.96011698092989" />
+      <inertia
+        ixx="0.0635585843345459"
+        ixy="1.4813562431649E-06"
+        ixz="-1.31633958301926E-05"
+        iyy="0.287249163034089"
+        iyz="-1.45333199496308E-07"
+        izz="0.265243882107114" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_4_joint"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="femur_4_link" />
+    <child
+      link="tibia_4_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="pitch_4_link">
+    <inertial>
+      <origin
+        xyz="-0.103835711575362 4.16333634234434E-16 -2.82726647649056E-10"
+        rpy="0 0 0" />
+      <mass
+        value="6.33029453889401" />
+      <inertia
+        ixx="0.0450020126784382"
+        ixy="7.26138423115816E-18"
+        ixz="1.74861595472406E-12"
+        iyy="0.0463115920590276"
+        iyz="8.0616416400947E-18"
+        izz="0.0373029491223062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_4_joint"
+    type="revolute">
+    <origin
+      xyz="-0.45 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="tibia_4_link" />
+    <child
+      link="pitch_4_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="roll_4_link">
+    <inertial>
+      <origin
+        xyz="-4.85722573273506E-17 1.38777878078145E-17 0.0362188872061382"
+        rpy="0 0 0" />
+      <mass
+        value="2.89141906646132" />
+      <inertia
+        ixx="0.0270370859108735"
+        ixy="3.99902323036091E-19"
+        ixz="1.68051336735253E-17"
+        iyy="0.0264160616419826"
+        iyz="-5.48426077190989E-18"
+        izz="0.0122331983415657" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_4_joint"
+    type="revolute">
+    <origin
+      xyz="-0.225 0 0"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="pitch_4_link" />
+    <child
+      link="roll_4_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="wheel_4_link">
+    <inertial>
+      <origin
+        xyz="-3.57853538468511E-10 -7.8204109854596E-12 -1.52655665885959E-16"
+        rpy="0 0 0" />
+      <mass
+        value="4.7012784751014" />
+      <inertia
+        ixx="0.014956729011549"
+        ixy="-9.27600934487006E-18"
+        ixz="-1.36317819590823E-19"
+        iyy="0.014956729011549"
+        iyz="9.56754663814901E-19"
+        izz="0.0216299418386296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_4_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.21"
+      rpy="-1.5707963267949 -0.0218496955892155 0" />
+    <parent
+      link="roll_4_link" />
+    <child
+      link="wheel_4_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="5" />
+  </joint>
+  <link
+    name="coxa_5_link">
+    <inertial>
+      <origin
+        xyz="0.0841776002576045 -0.0461779739081913 -2.2218190662282E-08"
+        rpy="0 0 0" />
+      <mass
+        value="3.09350209867758" />
+      <inertia
+        ixx="0.0294315495230903"
+        ixy="0.0124314311436931"
+        ixz="-5.79551470670104E-09"
+        iyy="0.0452732382073037"
+        iyz="-2.22228995830086E-08"
+        izz="0.0516882160049569" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_5_joint"
+    type="revolute">
+    <origin
+      xyz="1.00825406637877 -0.55310373134763 0.106"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_5_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="femur_5_link">
+    <inertial>
+      <origin
+        xyz="-0.249999999991003 6.93889390390723E-17 -1.0016154572412E-10"
+        rpy="0 0 0" />
+      <mass
+        value="9.59990933168454" />
+      <inertia
+        ixx="0.0909902906443394"
+        ixy="1.60445354418709E-17"
+        ixz="-8.73590470795715E-11"
+        iyy="0.501606623877438"
+        iyz="6.531983250411E-18"
+        izz="0.475621900290095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_5_joint"
+    type="revolute">
+    <origin
+      xyz="0.167457849285518 -0.091863315380346 0"
+      rpy="1.5707963267949 0 2.63984357380784" />
+    <parent
+      link="coxa_5_link" />
+    <child
+      link="femur_5_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="tibia_5_link">
+    <inertial>
+      <origin
+        xyz="0.261818628643969 -6.3043057244444E-06 -9.21716364238323E-05"
+        rpy="0 0 0" />
+      <mass
+        value="6.96014125805255" />
+      <inertia
+        ixx="0.0635589134253946"
+        ixy="1.44038404459051E-06"
+        ixz="1.31705486981007E-05"
+        iyy="0.287249194512423"
+        iyz="2.09976366256622E-07"
+        izz="0.265244297382873" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_5_joint"
+    type="revolute">
+    <origin
+      xyz="-0.499999999999999 0 0"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="femur_5_link" />
+    <child
+      link="tibia_5_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="pitch_5_link">
+    <inertial>
+      <origin
+        xyz="-0.103835711575361 1.11022302462516E-16 -2.82732282030906E-10"
+        rpy="0 0 0" />
+      <mass
+        value="6.33029453889401" />
+      <inertia
+        ixx="0.0450020126784382"
+        ixy="6.57867186439344E-18"
+        ixz="1.74865157076542E-12"
+        iyy="0.0463115920590276"
+        iyz="-4.67072586671456E-18"
+        izz="0.0373029491223062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_5_joint"
+    type="revolute">
+    <origin
+      xyz="0.45 0 0"
+      rpy="0 0 -3.14159265358979" />
+    <parent
+      link="tibia_5_link" />
+    <child
+      link="pitch_5_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="roll_5_link">
+    <inertial>
+      <origin
+        xyz="-3.17340154154522E-10 -2.4980018054066E-16 0.0362188872061378"
+        rpy="0 0 0" />
+      <mass
+        value="2.89141906646132" />
+      <inertia
+        ixx="0.0270370859108735"
+        ixy="-1.71405676189309E-18"
+        ixz="3.36229655228948E-12"
+        iyy="0.0264160616419826"
+        iyz="-8.47586132724697E-19"
+        izz="0.0122331983415657" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_5_joint"
+    type="revolute">
+    <origin
+      xyz="-0.22 0 0"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="pitch_5_link" />
+    <child
+      link="roll_5_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="wheel_5_link">
+    <inertial>
+      <origin
+        xyz="-1.71611169719199E-10 -3.1282976209468E-10 5.82867087928207E-16"
+        rpy="0 0 0" />
+      <mass
+        value="4.7012784751014" />
+      <inertia
+        ixx="0.014956729011549"
+        ixy="-5.71547127862865E-18"
+        ixz="-6.5044131199705E-18"
+        iyy="0.014956729011549"
+        iyz="-1.57202280128661E-18"
+        izz="0.0216299418386296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_5_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.21"
+      rpy="-1.5707963267949 -1.06904724701294 0" />
+    <parent
+      link="roll_5_link" />
+    <child
+      link="wheel_5_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1000"
+      velocity="5" />
+  </joint>
+  <link
+    name="coxa_6_link">
+    <inertial>
+      <origin
+        xyz="0.0820801003794213 0.049810917590959 -2.82973502963024E-08"
+        rpy="0 0 0" />
+      <mass
+        value="3.09350193006676" />
+      <inertia
+        ixx="0.0305469275370121"
+        ixy="-0.0130753634095859"
+        ixz="1.14910261843899E-08"
+        iyy="0.0441579718017226"
+        iyz="-1.44792654986163E-08"
+        izz="0.0516882226817457" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/coxa_6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coxa_6_joint"
+    type="revolute">
+    <origin
+      xyz="0.983128915464399 0.596621769279159 0.106"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="coxa_6_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="femur_6_link">
+    <inertial>
+      <origin
+        xyz="-0.249999999991003 1.38777878078145E-17 -1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="9.59990933168454" />
+      <inertia
+        ixx="0.0909902906443395"
+        ixy="2.31627282456647E-17"
+        ixz="-1.11022302462516E-16"
+        iyy="0.501606623877438"
+        iyz="5.04447403457353E-18"
+        izz="0.475621900290095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/femur_6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="femur_6_joint"
+    type="revolute">
+    <origin
+      xyz="0.163284889460506 0.0990910938171062 0"
+      rpy="1.5707963267949 0 -2.59614418240227" />
+    <parent
+      link="coxa_6_link" />
+    <child
+      link="femur_6_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="tibia_6_link">
+    <inertial>
+      <origin
+        xyz="-0.261818901511853 6.53753785329059E-06 -9.2388506157226E-05"
+        rpy="0 0 0" />
+      <mass
+        value="6.96011256471293" />
+      <inertia
+        ixx="0.0635386720924003"
+        ixy="1.74511242086806E-06"
+        ixz="-1.23020272945994E-05"
+        iyy="0.287252730680045"
+        iyz="-8.89510349103986E-07"
+        izz="0.265230667311697" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/tibia_6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tibia_6_joint"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="femur_6_link" />
+    <child
+      link="tibia_6_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="pitch_6_link">
+    <inertial>
+      <origin
+        xyz="-0.103835711575361 -1.38777878078145E-17 6.66133814775094E-16"
+        rpy="0 0 0" />
+      <mass
+        value="6.33029453889401" />
+      <inertia
+        ixx="0.0450020126784383"
+        ixy="-4.18367410361397E-18"
+        ixz="-1.21430643318376E-17"
+        iyy="0.0463115920590277"
+        iyz="-3.47022457242222E-18"
+        izz="0.0373029491223062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/pitch_6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_6_joint"
+    type="revolute">
+    <origin
+      xyz="-0.45 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="tibia_6_link" />
+    <child
+      link="pitch_6_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="roll_6_link">
+    <inertial>
+      <origin
+        xyz="-2.60984567290734E-11 9.64890667365381E-12 0.036218887210044"
+        rpy="0 0 0" />
+      <mass
+        value="2.89141906646132" />
+      <inertia
+        ixx="0.0270370859108734"
+        ixy="-1.53671546935195E-18"
+        ixz="9.97465998686664E-18"
+        iyy="0.0264160616419825"
+        iyz="-9.35395797648595E-13"
+        izz="0.0122331983415657" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/roll_6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_6_joint"
+    type="revolute">
+    <origin
+      xyz="-0.225 0 0"
+      rpy="2.6779 -1.5708 -2.6779" />
+    <parent
+      link="pitch_6_link" />
+    <child
+      link="roll_6_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="wheel_6_link">
+    <inertial>
+      <origin
+        xyz="3.65276697777972E-11 -6.01900751462381E-11 4.16333634234434E-17"
+        rpy="0 0 0" />
+      <mass
+        value="4.70127847510141" />
+      <inertia
+        ixx="0.014956729011549"
+        ixy="-5.38288412276149E-18"
+        ixz="-3.29770113907785E-19"
+        iyy="0.014956729011549"
+        iyz="-1.69062493888613E-18"
+        izz="0.0216299418386296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://athlete_rover/meshes/wheel_6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_6_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.210000000003905"
+      rpy="1.57079632692202 -1.02534785560738 3.14159265348112" />
+    <parent
+      link="roll_6_link" />
+    <child
+      link="wheel_6_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1000"
+      velocity="5" />
+  </joint>
+
+<!-- |  Leg 1 transmission  | -->
+  <transmission name="coxa_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="coxa_1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="coxa_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="femur_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="femur_1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="femur_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tibia_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="tibia_1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="tibia_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="pitch_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pitch_1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pitch_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="roll_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="roll_1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="roll_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="wheel_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_1_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="wheel_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+<!-- |  Leg 2 transmission  | -->
+  <transmission name="coxa_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="coxa_2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="coxa_2_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="femur_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="femur_2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="femur_2_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tibia_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="tibia_2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="tibia_2_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="pitch_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pitch_2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pitch_2_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="roll_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="roll_2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="roll_2_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="wheel_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_2_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="wheel_2_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+<!-- |  Leg 3 transmission  | -->
+  <transmission name="coxa_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="coxa_3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="coxa_3_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="femur_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="femur_3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="femur_3_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tibia_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="tibia_3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="tibia_3_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="pitch_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pitch_3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pitch_3_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="roll_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="roll_3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="roll_3_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="wheel_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_3_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="wheel_3_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+<!-- |  Leg 4 transmission  | -->
+  <transmission name="coxa_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="coxa_4_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="coxa_4_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="femur_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="femur_4_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="femur_4_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tibia_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="tibia_4_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="tibia_4_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="pitch_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pitch_4_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pitch_4_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="roll_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="roll_4_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="roll_4_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="wheel_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_4_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="wheel_4_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+<!-- |  Leg 5 transmission  | -->
+  <transmission name="coxa_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="coxa_5_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="coxa_5_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="femur_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="femur_5_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="femur_5_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tibia_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="tibia_5_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="tibia_5_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="pitch_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pitch_5_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pitch_5_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="roll_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="roll_5_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="roll_5_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="wheel_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_5_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="wheel_5_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+<!-- |  Leg 6 transmission  | -->
+  <transmission name="coxa_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="coxa_6_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="coxa_6_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="femur_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="femur_6_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="femur_6_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tibia_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="tibia_6_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="tibia_6_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="pitch_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pitch_6_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pitch_6_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="roll_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="roll_6_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="roll_6_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  
+    <transmission name="wheel_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_6_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="wheel_6_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+</robot>
