@@ -69,7 +69,9 @@ The script also includes functions for inverse kinematics, which allows the user
 
 ## Rover Design
 The design of the Athlete Rover has been made in SolidWorks. The SolidWorks files for the rover design are included in the repository and can be accessed for further improvements and modifications.
-![Screenshot 2024-02-11 012736](https://github.com/HarshShirsath/Robot-Modelling-Project-2-NASA-Athlete-Rover-/assets/113379668/6845b8d6-7bf6-464d-9f9c-157e0e7ba32c)
+![athlete_lunar_rover_rigged_361-1](https://github.com/HarshShirsath/Robot-Modelling-Project-2-NASA-Athlete-Rover-/assets/113379668/c41f5548-2e2e-4301-aadd-0eafbb001adc)
+![athletelunarroverrigged3dmodel010](https://github.com/HarshShirsath/Robot-Modelling-Project-2-NASA-Athlete-Rover-/assets/113379668/f11e94ca-48eb-48f6-825a-2ab7b7d61378)
+![ATHLETE_rovers_at_Dumont_Dunes (1)](https://github.com/HarshShirsath/Robot-Modelling-Project-2-NASA-Athlete-Rover-/assets/113379668/e5886673-8429-4c00-b13d-b350a7cc5b4c)
 
 
 
